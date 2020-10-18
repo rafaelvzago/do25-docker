@@ -74,4 +74,10 @@ docker run --rm -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=1 -e MYSQL_DATABASE=a
 
 - Comando muito grande, vamos simplificar!
 
-sudo apt-get install -y docker-compose
+- Instalar o docker compose:
+
+```bash
+config.vm.provision "shell", inline: "sudo curl --silent -L \"https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose"
+config.vm.provision "shell", inline: "sudo chmod +x /usr/local/bin/docker-compose"
+```
+
