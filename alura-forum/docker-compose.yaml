@@ -1,13 +1,15 @@
 version: '3.3'
 services:
   db:
-    image: mysql:5.7
+    build: ./alura-database
     restart: always
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: 'alura_forum'
-      # So you don't have to use root, but you can if you like
-      MYSQL_USER: 'alura'
-      MYSQL_PASSWORD: 'qwerty123'
-      MYSQL_ALLOW_EMPTY_PASSWORD: '1'
+      MYSQL_DATABASE: "alura_forum"
+      MYSQL_USER: "alura"
+      MYSQL_PASSWORD: "qwerty123"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "1"
+    volumes:
+      - /home/vagrant/mysql.conf.d:/etc/mysql/conf.d
+      - /home/vagrant/mysql-data:/var/lib/mysql
