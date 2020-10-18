@@ -26,3 +26,7 @@ touch oi
 ```sh
 vagrant halt
 ```
+
+- vagrant box list
+- vagrant box remove hashicorp/bionic64
+- vagrant box add hashicorp/bionic64
