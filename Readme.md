@@ -91,3 +91,7 @@ alura-database
 config.vm.provision "shell", inline: "sudo curl --silent -L \"https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose"
 config.vm.provision "shell", inline: "sudo chmod +x /usr/local/bin/docker-compose"
 ```
+
+adicionar logging.properties em src
+org.apache.catalina.core.ContainerBase.[Catalina].level=INFO
+org.apache.catalina.core.ContainerBase.[Catalina].handlers=java.util.logging.ConsoleHandler
