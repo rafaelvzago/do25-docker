@@ -1,6 +1,6 @@
 FROM tomcat:8.5.41-jre8-alpine
 
-ADD alura-forum-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
+ADD alura-forum.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
